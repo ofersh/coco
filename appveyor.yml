@@ -14,7 +14,6 @@ init:
   - cmd: "ECHO %PYTHON_VERSION% %MINICONDA%"
   - cmd: "set PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
   - cmd: "set PATH=%CYGWIN%;%CYGWIN%\\bin;%PATH%"
-  - cmd: "set PATH=C:\\projects\\coco\\code-experiments\\test\\unit-test\\lib\\win64;PATH"
 
 install:
   - cmd: conda install -y matplotlib numpy scipy setuptools six pytest

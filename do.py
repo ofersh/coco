@@ -122,6 +122,10 @@ def build_c_unit_tests():
     """ Builds unit tests in C """
     library_path = ''
     file_name = ''
+
+    print(sys.platform)
+    print(platform.machine())
+
     if 'win32' in sys.platform:
         file_name = 'cmocka.dll'
         if '64' in platform.machine():
