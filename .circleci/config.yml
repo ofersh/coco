@@ -20,6 +20,7 @@ references:
                            python3-six python3-pip python3-setuptools \
                            python3-scipy python3-pytest
         ln -s /usr/bin/python3 /usr/bin/python  # this is dirty
+        pip install setuptools
 
   test_ubuntu_example: &test_ubuntu_example
     run:
