@@ -367,6 +367,7 @@ class COCODataArchive(list):
             ['bbob/2017-outsideGECCO/RS5-1e7D.tgz'],
             ['bbob-noisy/2009/BFGS_ros_noisy.tgz'],  # selectively added for tests
             ['bbob-noisy/2009/MCS_huyer_noisy.tgz'],
+            ['bbob-biobj/2016/GA-MULTIOBJ-NSGA-II.tgz'],
             ['bbob-biobj/2016/RS-4.tgz'],  # selectively added for tests
             ['bbob-biobj/2016/RS-100.tgz'],
 	        ['test/N-II.tgz'],
@@ -466,9 +467,9 @@ class COCODataArchive(list):
         if not self.names_found:
             return None
         res = self.get(self.names_found[0], remote=remote)
-        # assert len(res) == 1  # only one exact matching entry in data base
         if len(res) != 1:
             print(res)
+        assert len(res) == 1  # only one exact matching entry in data base
         return res[0]
 
     def get(self, substrs=None, remote=True):
